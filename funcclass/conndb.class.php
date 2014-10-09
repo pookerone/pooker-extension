@@ -6,10 +6,10 @@
 
 class conndb {
 	private $dbms = "mysql";//数据库类型
-	private $username = "root";//登录mysql数据库服务器的用户名
-	private $password = "zbqacer";//Mysql服务器的用户密码
+	private $username = " ";//登录mysql数据库服务器的用户名
+	private $password = "  ";//Mysql服务器的用户密码
 	private $dbname = "pooker";//所要连接数据库名字
-	private $host = "localhost";//使用的主机名称
+	private $host = "localhost";//使用的主机名称或地址
 	private $dsn;//数据源名，
 	private static $conn;
 	private $timezone = "Asia/Chongqing";
