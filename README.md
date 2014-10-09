@@ -9,3 +9,5 @@ pooker网站
   
   **3.在saveemail.php中可添加其他显示操作**
   
+  **4.默认前端表单中用户名，邮箱的关键字为 username.email.如果，前端表单中用户名，邮箱的关键字不是这两个，可在saveemail.php中的$_POST['']中修改为表单中的关键字。
+  
