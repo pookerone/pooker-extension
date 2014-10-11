@@ -6,17 +6,15 @@
 include_once ("../autoload.php");
 
 class savemail {
-	private $username;
 	private $email;
 	private $result;
 
 /**
  * 注册页面逻辑功能类的构造函数
- * @param  $name 注册用户名称
  * @param  $email 注册验证邮箱
  */
-	function __construct($name, $email) {
-		$this->username = $name;
+	function __construct($email) {
+		
 		$this->email = trim($email);
 		$this->save();
 	}
@@ -35,7 +33,7 @@ class savemail {
 	 */
 	function save() {
 		$operdb = new operatedb();
-		$sql = "select name from useremail where name = '$this->username'";
+		$sql = "select useremail from useremail where useremail = '$this->email'";
 		$query = $operdb->executeSQL($sql);
 
 		if (is_array($query)) {
@@ -43,7 +41,7 @@ class savemail {
 			return;
 		}
 
-		$sql = "insert into `useremail` (`name`,`mail`) values ('{$this->username}','{$this->email}')";
+		$sql = "insert into `useremail` (`mail`) values ({$this->email}')";
 		$this->result = $operdb->executeSQL($sql);
 
 	}
