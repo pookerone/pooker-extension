@@ -4,12 +4,11 @@ include_once ("autoload.php");
 
 if (isset($_POST['submit'])) {
 
-	$username = $_POST['username'];
 	$email = $_POST['email'];
 
-	if (!empty($username) && !empty($email)) {
+	if ( !empty($email)) {
 
-		$usereg = new savemail($username, $email);
+		$usereg = new savemail($email);
 
 		$rest = $usereg->getResult();
 
