@@ -33,7 +33,7 @@ class savemail {
 	 */
 	function save() {
 		$operdb = new operatedb();
-		$sql = "select useremail from useremail where useremail = '$this->email'";
+		$sql = "select mail from useremail where mail = '$this->email'";
 		$query = $operdb->executeSQL($sql);
 
 		if (is_array($query)) {
