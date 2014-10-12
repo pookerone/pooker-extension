@@ -41,7 +41,7 @@ class savemail {
 			return;
 		}
 
-		$sql = "insert into `useremail` (`mail`) values ({$this->email}')";
+		$sql = "insert into `useremail` (`mail`) values ('{$this->email}')";
 		$this->result = $operdb->executeSQL($sql);
 
 	}
